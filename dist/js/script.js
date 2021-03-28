@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
           button = document.querySelector('.button_transparent'),
           title = document.querySelector('.header__title'),
           subTitle = document.querySelector('.header__subtitle'),
-          body = document.querySelector('body');
+          body = document.querySelector('body'),
+          scale = document.querySelectorAll('.skills-item__value'),
+          percent = document.querySelectorAll('.skills-item__percent');
 
     addBottomClass = function(item) {
         item.classList.add('bottom');
@@ -54,5 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.remove('active');
         }
     });
+
+    document.addEventListener('scroll', function() {
+        if (pageYOffset >  1350) {
+            percent.forEach((item, i) => {
+                scale[i].style.width = item.innerHTML;
+            });
+        } else {
+        }
+    });
+
 });
 

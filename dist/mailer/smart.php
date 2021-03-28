@@ -2,7 +2,7 @@
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$text = $_POST['textarea'];
+$text = $_POST['text'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
