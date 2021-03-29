@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
         item.classList.add('showed');
     };
     setTimeout(addBottomClass, 3300, menu);
-    setTimeout(addBottomClass, 2300, button);
+    setTimeout(addBottomClass, 4300, button);
     setTimeout(addShowedClass, 1000, title);
     setTimeout(addShowedClass, 2300, subTitle);
     setTimeout(function(item) {
         item.classList.add('visible');
-    }, 4000, body);
+    }, 4300, body);
 
     $(document).ready(function(){
         $('.portfolio__carousel').slick({
