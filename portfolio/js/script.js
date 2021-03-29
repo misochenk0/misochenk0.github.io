@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     $(document).ready(function(){
-        $("#header, #about, #skills, #portfolio").on("click",".header__link", function (event) {
+        $("#header, #about, #skills, #portfolio").on("click",".header__link, .header-mobile__link", function (event) {
             event.preventDefault();
             const id  = $(this).attr('href'),
                 top = $(id).offset().top;
