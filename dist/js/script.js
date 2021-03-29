@@ -1,6 +1,7 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    
+    $(window).on('beforeunload', function(){
+        $(window).scrollTop(0);
+      });
     const menu = document.querySelector('.header__menu'),
           button = document.querySelector('.button_transparent'),
           title = document.querySelector('.header__title'),
@@ -9,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
           scale = document.querySelectorAll('.skills-item__value'),
           percent = document.querySelectorAll('.skills-item__percent');
 
+        
     addBottomClass = function(item) {
         item.classList.add('bottom');
     };
     addShowedClass = function(item) {
         item.classList.add('showed');
     };
-
     setTimeout(addBottomClass, 3300, menu);
     setTimeout(addBottomClass, 2300, button);
     setTimeout(addShowedClass, 1000, title);
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $(document).ready(function(){
         $('.portfolio__carousel').slick({
+            dots: true,
         });
     });
     $(document).ready(function(){
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     document.addEventListener('scroll', function() {
-        if (pageYOffset > 200) {
+        if (pageYOffset > 100) {
             menu.classList.add('active');
         } else {
             menu.classList.remove('active');
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.addEventListener('scroll', function() {
-        if (pageYOffset >  1350) {
+        if (pageYOffset >  1000) {
             percent.forEach((item, i) => {
                 scale[i].style.width = item.innerHTML;
             });
